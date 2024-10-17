@@ -1,0 +1,21 @@
+{
+  "name": "base_node_js_projects_template",
+  "version": "1.0.0",
+  "description": "A basic starter boilerplate projects for node",
+  "main": "index.js",
+  "scripts": {
+    "dev": " npx node --watch src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yusuf",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "http-status-codes": "^2.3.0",
+    "node": "^22.10.0",
+    "node-watch": "^0.7.4",
+    "nodemon": "^3.1.7",
+    "winston": "^3.15.0"
+  }
+}
