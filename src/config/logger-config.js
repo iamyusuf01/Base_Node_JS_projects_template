@@ -1,16 +1,16 @@
-const { format } = require('path');
-const { createLogger, formate, transports} = require('winston');
+// const { format } = require('path');
+const { createLogger, format, transports} = require('winston');
 const { combine, timestamp, label, printf} = format;
 
-const customFormat = printf(({lavel, message, label, timestamp}) => {
-    return `${timestamp} : ${label} : ${lavel} : ${message}` ;
+const customFormat = printf(({lavel, message, timestamp}) => {
+    return `${timestamp} : ${lavel} : ${message}` ;
 })
 
 const logger = createLogger({
     format: combine(
-        label({ label: 'right meow'}),
         timestamp({format: 'YYYY-MM-DD HH:mm:ss'}),
-        customFormat
+        customFormat,
+        // format.simple()
     ),
     transports: [
         new transports.Console(),
